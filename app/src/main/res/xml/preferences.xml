@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Tasks">
+        <SwitchPreferenceCompat
+            android:key="hide_completed_tasks"
+            android:title="Hide Completed Tasks"
+            android:summary="Hide tasks that have been marked as completed"
+            android:defaultValue="false" />
+
+        <MultiSelectListPreference
+            android:key="visible_categories"
+            android:title="Visible Categories"
+            android:summary="Select categories to display"
+            android:entries="@array/category_entries"
+            android:entryValues="@array/category_entries"
+            android:defaultValue="@array/category_entries" />
+
+        <ListPreference
+            android:key="notification_time"
+            android:title="Notification Time"
+            android:summary="Minutes before task due time to show notification"
+            android:entries="@array/notification_time_entries"
+            android:entryValues="@array/notification_time_entries"
+            android:defaultValue="0" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+
+
